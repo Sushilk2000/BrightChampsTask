@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import InstructionCard from "./InstructionCard";
 import { cards } from "./cards";
+import InstructionCard from "./InstructionCard";
 function InstructionsPage() {
   const nav = useNavigate();
   return (
@@ -23,9 +23,10 @@ function InstructionsPage() {
       </button>
       <div className="flex w-screen h-screen items-center justify-center">
         <div className="flex justify-center gap-32 bg-center bg-cover bg-[url(/Vector.png)]">
-          {cards?.map((card) => (
-            <InstructionCard card={card} key={String(card.id)} />
-          ))}
+          {cards &&
+            cards.map((cardData) => (
+              <InstructionCard cardData={cardData} key={String(cardData.id)} />
+            ))}
         </div>
       </div>
     </div>

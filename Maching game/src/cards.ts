@@ -1,9 +1,9 @@
 interface Card {
   id: Number;
-  bg: String;
-  front: String | null;
-  title: String;
-  description: String;
+  bg: string;
+  front: string | null;
+  title: string;
+  description: string;
 }
 export const cards: Card[] = [
   {

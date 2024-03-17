@@ -3,7 +3,7 @@ import { FaVolumeXmark } from "react-icons/fa6";
 import { useRef, useState } from "react";
 function BackgroundPage() {
   const [musicStatus, setMusicStatus] = useState<boolean>(false);
-  const musicRef = useRef(null);
+  const musicRef = useRef<HTMLAudioElement | null>(null);
   const toggleMusic = () => {
     const audio = musicRef.current;
     if (audio) {
